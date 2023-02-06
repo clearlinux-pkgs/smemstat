@@ -7,7 +7,7 @@ Version  : 0.02.11
 Release  : 1
 URL      : https://github.com/ColinIanKing/smemstat/archive/refs/tags/V0.02.11.tar.gz
 Source0  : https://github.com/ColinIanKing/smemstat/archive/refs/tags/V0.02.11.tar.gz
-Summary  : No detailed summary available
+Summary  : smemstat reports memory usage taking into account shared memory regions
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: smemstat-bin = %{version}-%{release}
@@ -20,8 +20,9 @@ BuildRequires : pkgconfig(ncursesw)
 %define debug_package %{nil}
 
 %description
-smemstat can output data in a JSON format using the -o option.
-smemstat -o smemstat.json
+smemstat reports the physical memory usage taking into consideration
+shared memory. The tool can either report a current snapshot of memory
+usage or periodically dump out any changes in memory.
 
 %package bin
 Summary: bin components for the smemstat package.
